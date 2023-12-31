@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>v2ray configs</title>
+    <style>
+
+        body {
+            display: flex; 
+            flex-direction: column; 
+            gap: 3rem; align-items: center;
+            justify-content: center;
+            background-color: #111827;
+        }
+
+        h1 {
+            color: gray;
+            max-width: 60%;
+            width: 100%;
+            margin: 0 auto;
+            word-wrap: break-word;
+        }
+
+        button {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        h4 {
+            display: none;
+            color: red;
+        }
+
+    </style>
 </head>
-<body style="display: flex; align-items: center;justify-content: center;background-color: #111827;">
-    <h1 style="color: gray;"></h1>
+
+<body>
+    <h1>
+        vless://86e61772-22d0-405c-bbc9-0a9cc3deb0de@tgju.org:443?path=%2Fvless&security=tls&encryption=none&host=ss1.v2vpnchannel.website&type=ws&sni=ss1.v2vpnchannel.website#%40v2Rinjector+%F0%9F%A4%8D%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86
+    </h1>
+    
+    <button>copy</button>
+
+    <h4>copied</h4>
+
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            navigator.clipboard.writeText(document.querySelector("h1").innerHTML)
+            document.querySelector("h4").style.display = "block"
+            setTimeout(() => {document.querySelector("h4").style.display = "none"}, 1000);
+        })
+    </script>
+
 </body>
+
 </html>
